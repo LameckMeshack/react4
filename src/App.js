@@ -4,6 +4,7 @@ import MyApp from "./components/context/MyApp";
 import Todos from "./components/Todos";
 import Users from "./components/User";
 import Layout from "./components/Layout";
+import Deffered from "./components/Deffered";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Todos />
       <Users />
       <Layout />
+      <Deffered />
     </div>
   );
 }
