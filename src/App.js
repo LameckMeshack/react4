@@ -1,22 +1,18 @@
 import "./App.css";
-import Form from "./components/form";
-import MyApp from "./components/context/MyApp";
-import Todos from "./components/Todos";
-import Users from "./components/User";
-import Layout from "./components/Layout";
-import Deffered from "./components/Deffered";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
 
 function App() {
   return (
-    <div className="App">
-      <Form />
-      <MyApp />
-      <br />
-      <Todos />
-      <Users />
-      <Layout />
-      <Deffered />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route index element={<Home />} />
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
