@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import MyApp from "../components/context/MyApp";
 function Login() {
   let navigate = useNavigate();
   function handleClick() {
@@ -8,6 +9,7 @@ function Login() {
   return (
     <div>
       <button onClick={handleClick}>go home</button>
+      <MyApp />
     </div>
   );
 }
