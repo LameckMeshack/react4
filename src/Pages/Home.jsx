@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "../components/form";
-import Layout from "../components/Layout";
 import Users from "../components/User";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <br />
       <button onClick={goTodos}>Todo</button>
       <Users />
-      <Layout />
     </div>
   );
 }
