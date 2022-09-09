@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Link } from "react-router-dom";
 
 function createInitialState(username) {
   const initialTodos = [];
@@ -47,7 +48,7 @@ function reducer(state, action) {
   //   throw Error("Unknown action: " + action.type);
 }
 
-export default function Todos({ username = "Guest" }) {
+export default function Todos({ username = "Rhino" }) {
   const [state, dispatch] = useReducer(reducer, username, createInitialState);
   return (
     <>
@@ -69,7 +70,11 @@ export default function Todos({ username = "Guest" }) {
       </button>
       <ul>
         {state.todos.map((item) => (
-          <li key={item.id}>{item.text}</li>
+          <li key={item.id}>
+            {item.text}
+            {/* Link to the page */}
+            <Link to={`/todos/${item.id}`}>View</Link>
+          </li>
         ))}
       </ul>
     </>
